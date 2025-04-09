@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilo Personale</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #0073e6;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titolo">Benvenuto nel mio profilo</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Chi sono</a></li>
+                <li><a href="#skills">Competenze</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Chi sono</h2>
+        <img src="profile.jpg" alt="Foto profilo">
+        <p>Ciao! Sono uno sviluppatore web appassionato di HTML e CSS.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Competenze</h2>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Livello</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Avanzato</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Intermedio</td>
+            </tr>
+        </table>
+    </section>
+    
+    <section id="media">
+        <h2>Video Presentazione</h2>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Il tuo browser non supporta il video.
+        </video>
+    </section>
+    
+    <section id="contact">
+        <h2>Contattami</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
+            
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 - Profilo Personale</p>
+    </footer>
+</body>
+</html>
