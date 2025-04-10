@@ -1,0 +1,100 @@
+p::after,
+p::before {
+  content: "👌";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  height: 500px;
+  position: relative;
+}
+
+.box {
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#grow {
+  flex: 1;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    align-items: center;
+  }
+  .box {
+    width: 150px;
+    background-color: red;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .container {
+    align-items: center;
+  }
+  .box {
+    width: 150px;
+    background-color: blue;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 150px;
+    background-color: yellow;
+  }
+}
+
+.float-box {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: violet;
+  margin-right: 10px;
+  position: relative;
+}
+
+.separator {
+  clear: both;
+}
+
+.relative-box {
+  position: relative;
+  height: 200px;
+  background-color: brown;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  background-color: orange;
+  padding: 10px;
+}
+
+.fixed-box {
+  position: fixed;
+  top: 0;
+  background: yellow;
+  padding: 20px;
+}
