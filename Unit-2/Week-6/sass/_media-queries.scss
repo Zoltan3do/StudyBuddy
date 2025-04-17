@@ -1,0 +1,11 @@
+@use "mixins";
+
+.card {
+  @include mixins.respond(tablet) {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  &:hover {
+    padding: 20px;
+  }
+}

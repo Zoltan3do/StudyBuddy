@@ -1,0 +1,22 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($props) {
+  transition: $props 0.3s ease-in-out;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+  }@else if $breakpoint == tel {
+    @media (max-width: 460px){
+        @content
+    }
+  }
+}

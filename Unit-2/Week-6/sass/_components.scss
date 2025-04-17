@@ -1,0 +1,39 @@
+@use "mixins";
+
+%card {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px black;
+}
+
+.card {
+  @extend %card;
+  background: transparent;
+  &:hover {
+    box-shadow: 0 5px 10px black;
+  }
+}
+
+.button {
+  @include flex-center;
+  background-color: $primary-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  @include transition(all);
+}
+
+@each $theme in (light, dark, colorful) {
+  .theme-#{$theme} {
+    @if $theme == light {
+      background-color: white;
+      color: black;
+    } @else if $theme == dark {
+      background-color: black;
+      color: white;
+    } @else {
+      background: linear-gradient(to right, red, yellow);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+body {
+  font-family: "Segoe UI ", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+.card:hover {
+  padding: 20px;
+}
+
+.card {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px black;
+}
+
+.card {
+  background: transparent;
+}
+.card:hover {
+  box-shadow: 0 5px 10px black;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #442323;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-light {
+  background-color: white;
+  color: black;
+}
+
+.theme-dark {
+  background-color: black;
+  color: white;
+}
+
+.theme-colorful {
+  background: linear-gradient(to right, red, yellow);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.ciao {
+  content: "ciao";
+}
+
+/*# sourceMappingURL=style.css.map */
